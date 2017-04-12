@@ -1,0 +1,23 @@
+// Paragraph font
+// @include openSans;
+@mixin openSans($type: regular) {
+  font-family: $open-sans;
+
+  @if $type == regular {
+    font-weight: 400;
+  }
+
+  @if $type == italic {
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @if $type == light {
+    font-weight: 300;
+  }
+
+  @if $type == lightItalic {
+    font-weight: 300;
+    font-style: italic;
+  }
+}

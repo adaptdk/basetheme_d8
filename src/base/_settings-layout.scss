@@ -1,0 +1,53 @@
+// IMPORTANT:
+// Load this file before loading neat, but after loading bourbon.
+@import "../../node_modules/bourbon-neat/app/assets/stylesheets/neat-helpers";
+
+// Overrides
+$column: 60px;
+$gutter: 20px;
+$grid-columns: 12;
+$max-width: 1200px;
+
+// Visual grid
+$visual-grid: false;
+$visual-grid-color: #ff69b4;
+$visual-grid-index: back;
+$visual-grid-opacity: 0.5;
+
+// Visual Variables
+$base-border: 1px solid $color--primary;
+$bot-margin: 1rem;
+$border-radius: 2px;
+
+// Breakpoints
+$xsmall: 360px;     // Small phone
+$small: 640px;      // Phone
+$medium: 768px;     // Tablet Horizontal (1024px - iPad)
+$large: 1024px;     // Tablet Vertically (1024px - iPad)
+$full: 1280px;      // Laptop (1280px - Macbook)
+$xlarge: 1450px;    // Desktop
+
+// Media Queries
+// Xtra Small
+$xsmall-up: new-breakpoint(min-width $xsmall + 1px 4);
+$xsmall-down: new-breakpoint(max-width ($xsmall) 4);
+
+// Small
+$small-up: new-breakpoint(min-width $small + 1px 4);
+$small-down: new-breakpoint(max-width ($small) 4);
+
+// Medium
+$medium-up: new-breakpoint(min-width $medium + 1px 8);
+$medium-down: new-breakpoint(max-width ($medium) 8);
+
+// Large
+$large-up: new-breakpoint(min-width $large + 1px 12);
+$large-down: new-breakpoint(max-width ($large) 12);
+
+// Full
+$full-up: new-breakpoint(min-width $full + 1px 12);
+$full-down: new-breakpoint(max-width ($full) 12);
+
+// XLarge
+$xlarge-up: new-breakpoint(min-width $xlarge + 1px 12);
+$xlarge-down: new-breakpoint(max-width ($xlarge) 12);

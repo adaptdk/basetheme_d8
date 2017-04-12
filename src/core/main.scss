@@ -1,0 +1,22 @@
+// Adds Normalizer
+@import "~normalize.css/normalize.css";
+
+// Mixins - Makes it easy to copy mixin folder to another project
+@import "~adapt-mixins/src/mixins/mixins.scss";
+@import "../mixins/mixins.scss";
+
+
+// Settings & Base code
+@import "~bourbon/app/assets/stylesheets/bourbon";
+@import "../base/settings-color";
+@import "../base/settings-layout";
+@import "~bourbon-neat/app/assets/stylesheets/neat";
+@import "../base/settings-typography";
+@import "../base/typography";
+@import "../base/utility";
+
+// Components
+@import "../components/component/component";
+
+// Layout elements
+@import "../layout/base/base";
