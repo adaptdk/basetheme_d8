@@ -1,0 +1,29 @@
+name: D8 Default theme
+description: 'Starter theme'
+package: Custom
+type: theme
+version: 1.0
+core: 8.x
+libraries:
+  - d8_theme/modernizr
+  - d8_theme/main
+# Stylesheets
+stylesheets:
+  all:
+    - dist/bundle.css
+  print:
+    - dist/print.css
+# Regions
+regions:
+  header: Header
+  taxonomy_header: Taxonomy Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  slider_top: Slider top
+  content: Content
+  footer: 'Footer'
+# Settings
+settings:
+  shortcut_module_link: '0'

@@ -1,0 +1,33 @@
+<?php 
+
+function d8_theme_page_alter(&$page) {
+  //$page['#attached']['library'][] = 'dsntech_theme/slider';
+}
+
+/*function dsntech_theme_preprocess_page(&$vars) {
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    if ($node->__isset('field_header_image') {
+      $field_image = $node->get('field_header_image');
+      $vars['field_header_image'] = $field_image->view();
+    }
+
+  }
+}*/
+
+function d8_theme_preprocess_html(&$variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+  $variables['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+}
+
+function d8_theme_preprocess_node(&$variables) {
+  $variables['news'] = views_embed_view('news', 'block_news');
+  //Make is_front available in templates
+  try {
+    $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  }
+  catch (Exception $e) {
+    $variables['is_front'] = FALSE;
+  }
+}
+
