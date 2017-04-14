@@ -2,15 +2,15 @@
 Starter d8 theme for everyday projects
 
 ## Some of the features
-1. JS-CSS compiling ready
-2. css/template file structure already created
-3. /user login, errors, tabs and pager styled initially - easy to modify
-4. General re-usable mixins (constantly updated)
-5. Some templates e.g. views-blocks are modified to have more classes for unique selectors
-6. Can use region rendering in nodes same way you can in page.html.twig (see node_preprocess hook)
-7. Responsive typography and vertical rhytm with help of [Typi](https://github.com/zellwk/typi) (see typography-settings.scss)
-8. Packed with [font-awesome 4.7.0](http://fontawesome.io/) (just uncomment in .info file)
-9. 
++ JS-CSS compiling ready
++ css/template file structure already created
++ /user login, errors, tabs and pager styled initially - easy to modify
++ General re-usable mixins (constantly updated)
++ Some templates e.g. views-blocks are modified to have more classes for unique selectors
++ Can use region rendering in nodes same way you can in page.html.twig (see node_preprocess hook)
++ Responsive typography and vertical rhytm with help of [Typi](https://github.com/zellwk/typi) (see typography-settings.scss)
++ Packed with [font-awesome 4.7.0](http://fontawesome.io/) (just uncomment in .info file)
++ Linting ready just uncomment in webpack.config file 
 
 
 
