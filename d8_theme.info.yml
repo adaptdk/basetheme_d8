@@ -7,6 +7,7 @@ core: 8.x
 libraries:
   - d8_theme/modernizr
   - d8_theme/main
+#  - d8_theme/font-awesome
 # Stylesheets
 stylesheets:
   all:

@@ -4,6 +4,12 @@ modernizr:
     js/modernizr.js: {}
   dependencies:
     - core/jquery
+
+font-awesome:
+  css:
+    theme:
+      dist/font-awesome/css/font-awesome.min.css: {}
+
 main:
   version: 1
   js:
@@ -13,6 +19,7 @@ main:
     - core/jquery.once
     - core/drupal
     - core/drupalSettings
+
 fonts:
   license:
     name: SIL Open Font License, 1.1
