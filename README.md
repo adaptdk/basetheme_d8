@@ -36,4 +36,4 @@ npm install
 npm run watch
 ```
 
-#Have fun developing your next theme
+# Have fun developing your next theme
