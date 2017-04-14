@@ -14,3 +14,5 @@ OSX
 ```
 sed '.bak' -i 's/d8_theme/new_theme/g' *.*
 ```
+3. Add logo.svg file from the new project
+4. Generate favicons by using one of the favicon, put them in favicon folder, add favicon.ico in theme folder and make sure that code matches with the one in html.twig template
