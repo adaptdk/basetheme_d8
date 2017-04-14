@@ -9,6 +9,7 @@ Starter d8 theme for everyday projects
 5. Tabs appear fixed on screen
 6. Can use region rendering in nodes same way you can in page.html.twig
 7. Responsive typography and vertical rhytm with [Typi](https://github.com/zellwk/typi)
+8. General mixins (constantly updated)
 
 
 
