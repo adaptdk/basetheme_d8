@@ -4,7 +4,7 @@ Starter d8 theme for everyday projects
 ## Some of the features
 1. JS-CSS compiling ready
 2. css/template file structure already created
-3. /user login, errors and tabs and pager styled initially - easy to modify
+3. /user login, errors, tabs and pager styled initially - easy to modify
 4. General re-usable mixins (constantly updated)
 5. 
 6. Can use region rendering in nodes same way you can in page.html.twig (see node_preprocess hook)
