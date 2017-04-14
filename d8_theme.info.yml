@@ -16,7 +16,6 @@ stylesheets:
 # Regions
 regions:
   header: Header
-  taxonomy_header: Taxonomy Header
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   page_top: 'Page top'

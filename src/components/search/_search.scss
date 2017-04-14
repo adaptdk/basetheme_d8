@@ -1,0 +1,61 @@
+.layout-header {
+  .search-block-form {
+    float: right;
+    margin-top: 36px;
+
+    #search-block-form {
+      &.expanded {
+        .form-item {
+          max-width: 150px;
+        }
+      }
+    }
+
+    .form-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 180px;
+      max-width: 0;
+      overflow: hidden;
+      transition: max-width 0.2s linear;
+      margin-right: 5px;
+
+      input {
+        padding: 5px;
+        width: calc(100% - 10px);
+        margin-left: 10px;
+      }
+    }
+
+    .form-actions {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+
+      &:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        font-size: 24px;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        color: $color--grey-dark;
+        pointer-events: none;
+      }
+
+      .button {
+        @include typi('mainmenu');
+        color: $color--grey-dark;
+        background: none;
+        border: 0;
+        padding-left: 30px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+}

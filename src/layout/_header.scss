@@ -1,0 +1,22 @@
+.layout-header {
+  .inner-content {
+    //@include main-content(1300px);
+  }
+}
+
+// Site logo
+.block-system-branding-block {
+  display: inline-block;
+  width: 400px;
+  position: relative;
+  top: 20px;
+
+  a {
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

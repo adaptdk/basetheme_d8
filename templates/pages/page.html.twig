@@ -76,62 +76,27 @@
  * @see html.html.twig
  */
 #}
-<div class="page-wrapper">
+<div class="layout-container">
 
-  <header id="header" role="banner" aria-label="{{ 'Site header'|t}}"><div class="section clearfix">
-
-    <div class="header-main">
-      <div class="inner">
-      {{ page.header }}
-      </div>
+  <header role="banner" class="layout-header">
+    <div class="inner-content">
+      {{ page.header_row_first }}
     </div>
+  </header>
 
-  </header> <!-- #header-->
+  <main role="main" class="layout-main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-  {% if messages %}
-    <div id="messages">
-      <div class="section clearfix">
-      {{ messages }}
-      </div>
-    </div> <!-- /.section, /#messages -->
-  {% endif %}
-
-  <div id="main-wrapper" class="main-wrapper clearfix">
-
-    <main id="content" class="column" role="main">
-      <section class="section">
-
-      {% if page.highlighted %}<div id="highlighted">{{ page.highlighted }}</div>{% endif %}
-      <a id="main-content" tabindex="-1"></a>
-        {% if tabs %}
-          <nav class="tabs" role="navigation" aria-label="{{ 'Tabs'|t }}">
-            {{ tabs }}
-          </nav>
-        {% endif %}
-      {{ page.help }}
-        {% if action_links %}
-          <ul class="action-links">
-            {{ action_links }}
-          </ul>
-        {% endif %}
-
-        
+    <div class="layout-content">
       {{ page.content }}
+    </div>{# /.layout-content #}
 
-      {{ feed_icons }}
+  </main>
 
-      </section>
-    </main> <!-- /.section, /#content -->
+  <footer role="contentinfo" class="layout-footer">
+    <div class="inner-content">
+      {{ page.footer }}
+    </div>
+  </footer>
 
-  </div><!-- /#main-wrapper -->
-
-
-  {% if page.footer %}
-    <footer class="footer" role="contentinfo" class="clearfix">
-      {{ page.footer}}
-    </footer> <!-- /#footer -->
-  {% endif %}
-
-
-
-</div> <!-- /#page, /#page-wrapper -->
+</div>{# /.layout-container #}

@@ -1,0 +1,57 @@
+.user-login-form, .user-form {
+  padding: vr(3) 0;
+  @include main-content(500px);
+
+  .form-item {
+    margin-bottom: 10px;
+    width: 100%;
+
+    label {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .form-text, .form-email {
+      display: block;
+      height: 34px;
+      width: 100%;
+    }
+  }
+
+  .description {
+    font-size: 14px;
+    color: darken($color--grey, 20%);
+    margin-top: 4px;
+  }
+
+  a {
+    color: $color--primary;
+  }
+
+  .form-submit {
+    @include button();
+    border: 0;
+    margin: 20px auto;
+    display: block;
+    width: 100px;
+  }
+
+  .js-form-type-checkbox {
+    label {
+      display: inline-block;
+    }
+  }
+}
+
+.path-user {
+
+  h1 {
+    text-align: center;
+  }
+
+  .block-system, .views-element-container {
+    @include main-content(1300px);
+    @include clearfix;
+    padding: vr(3) 0;
+  }
+}

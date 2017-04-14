@@ -16,7 +16,22 @@
 @import "../base/utility";
 
 // Components
-@import "../components/component/component";
+@import "../components/search/search";
+@import "../components/system/system";
+@import "../components/system/pager";
+@import "../components/system/user";
 
 // Layout elements
 @import "../layout/base/base";
+@import "../layout/header";
+@import "../layout/footer";
+
+body {
+  background: $color--smoke;
+}
+
+.layout-content {
+  padding-top: vr(5);
+  padding-bottom: vr(5);
+  @include main-content(1300px);
+}

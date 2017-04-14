@@ -1,2 +1,8 @@
 // Mixin list
 @import "typography";
+
+@mixin main-content($width) {
+  margin: 0 auto;
+  max-width: $width;
+  width: 95%;
+}

@@ -1,9 +1,12 @@
+
+
 // General
+html {
+  @include typi-init;
+}
+
 body {
   @include openSans;
-
-  color: $color--primary;
-  font-size: $font-size;
 }
 
 // Headers
@@ -17,11 +20,13 @@ h6 {
 }
 
 h1 {
-  font-size: $h1-size;
+  @include typi('h1');
+  margin-bottom: vr(2); // 2 baselines
 }
 
 h2 {
-  font-size: $h2-size;
+  @include typi('h2');
+  margin-bottom: vr(2); // 2 baselines
 }
 
 h3 {

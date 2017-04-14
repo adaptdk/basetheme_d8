@@ -38,7 +38,9 @@
   set classes = [
     'block',
     'block-' ~ configuration.provider|clean_class,
+    'block-' ~ block.module|clean_class,
     configuration.id|clean_class|replace({'views-block': ""}),
+    configuration.label|clean_class,
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
