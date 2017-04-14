@@ -1,6 +1,17 @@
 # basetheme_d8
 Starter d8 theme for everyday projects
 
+## Some of the features
+1. JS-CSS compiling ready
+2. css/template file structure already created
+3. /User page styled to look properly from the beginning
+4. Error messages styled
+5. Tabs appear fixed on screen
+6. Can use region rendering in nodes same way you can in page.html.twig
+7. Responsive typography and vertical rhytm with [Typi](https://github.com/zellwk/typi)
+
+
+
 ## Once checked out
 1. Rename files to proper theme name via console
 ```
