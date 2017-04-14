@@ -10,6 +10,7 @@ Starter d8 theme for everyday projects
 6. Can use region rendering in nodes same way you can in page.html.twig
 7. Responsive typography and vertical rhytm with [Typi](https://github.com/zellwk/typi)
 8. General mixins (constantly updated)
+9. Packed with [font-awesome](http://fontawesome.io/) (just uncomment in .info file)
 
 
 
