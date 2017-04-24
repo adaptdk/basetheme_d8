@@ -36,7 +36,9 @@
     "stylelint": "7.5.0",
     "stylelint-config-standard": "14.0.0",
     "stylelint-webpack-plugin": "0.4.0",
-    "webpack": "1.13.3"
+    "webpack": "1.13.3",
+    "typi": "3.0.0",
+    "font-awesome": "4.7.0"
   },
   "license": "ISC",
   "bugs": {

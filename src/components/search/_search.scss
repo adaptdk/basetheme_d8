@@ -1,0 +1,104 @@
+.layout-header {
+  position: relative;
+
+  .search-block-form {
+    float: right;
+    margin-top: 36px;
+    position: static!important;
+    @include media($xlarge-down) {
+      margin-top: 32px;
+    }
+
+    #search-block-form {
+      &.expanded {
+        .form-item {
+          left: 490px;
+          right: 74px;
+          top: 28px;
+          max-width: 100%;
+          opacity: 1;
+          @include media($xlarge-down) {
+            left: 300px;
+          }
+          @include media($full-down) {
+            left: 130px;
+          }
+          @include media($large-down) {
+            right: 60px;
+          }
+        }
+
+        .form-actions {
+          &:before {
+            color: $color--primary;
+          }
+        }
+      }
+    }
+
+    .form-item {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 0;
+      overflow: hidden;
+      transition: left 0.4s ease-in-out, opacity 0.4s ease-in-out;
+      margin-right: 5px;
+      position: absolute;
+      z-index: 10;
+      left: 100%;
+      opacity: 0;
+
+      input {
+        padding: 14px 10px;
+        width: 100%;
+        font-family: $sans;
+        @include media($xlarge-down) {
+          padding: 8px 10px;
+        }
+
+        &:focus {
+          border: 1px solid $color--primary;
+        }
+      }
+    }
+
+    .form-actions {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      margin-left: 10px;
+      @include media($large-down) {
+        margin-left: 20px;
+      }
+
+      &:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        font-size: 24px;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        color: $color--grey-dark;
+        pointer-events: none;
+        transition: 0.3s color ease-in-out;
+      }
+
+      .button {
+        background: none;
+        border: 0;
+        padding-left: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: $sans;
+        font-size: 0.1px;
+        color: transparent;
+        width: 36px;
+        height: 36px;
+
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+}

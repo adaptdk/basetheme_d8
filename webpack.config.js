@@ -1,9 +1,10 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var path = require('path');
 
 module.exports = {
   entry: {
-    bundle: './src/core/main.scss'
+    bundle: './src/core/main.js'
   },
   output: {
     filename: 'bundle.js',

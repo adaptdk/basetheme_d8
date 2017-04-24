@@ -1,0 +1,197 @@
+.layout-footer {
+  background: $color--grey-light;
+  padding-top: vr(3);
+  padding-bottom: vr(3);
+  font-family: $sans;
+
+  &__row1 {
+    @include main-content(1300px);
+    margin-bottom: vr(2);
+
+  }
+
+  &__row2 {
+    padding: 0 vr(1);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color--grey-dim;
+    @include media($huge-down) {
+      font-size: 17px;
+      line-height: 25px;
+    }
+    @include media($xlarge-down) {
+      text-align: center;
+    }
+    @include media($small-down) {
+      font-size:16px;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      background: url(../logo.png) center center no-repeat;
+      background-size: 130px;
+      width: 140px;
+      height: 131px;
+      margin-right: 50px;
+      vertical-align: middle;
+      filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+      filter: gray; /* IE6-9 */
+      -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+      @include media($huge-down) {
+        background-size: 78px;
+        width: 78px;
+        height: 82px;
+        margin-right: 30px;
+      }
+      @include media($xlarge-down) {
+        display: none;
+      }
+    }
+
+    .block {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    //social-media
+    nav {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        > li {
+          display: inline-block;
+          vertical-align: top;
+
+          a {
+            background: url(../src/img/social-media-footer.svg) left top no-repeat;
+            background-size: 185px;
+            width: 40px;
+            height: 40px;
+            display: block;
+            font-size: 0.1px;
+            text-decoration: none;
+            color: transparent;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+
+          //mail
+          &:nth-of-type(1) {
+            a {
+              background-position: 0px 0px;
+            }
+          }
+
+          //twitter
+          &:nth-of-type(2) {
+            a {
+              background-position: -48px 0px;
+            }
+          }
+
+          //facebook
+          &:nth-of-type(3) {
+            a {
+              background-position: -97px 0px;
+            }
+          }
+
+          //linked in
+          &:nth-of-type(4) {
+            a {
+              background-position: -145px 0px;
+            }
+          }
+
+          + li {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-footer {
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+  @include media($medium-down) {
+    width: 100%;
+  }
+
+  > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    > li {
+      display: inline-block;
+      width: 25%;
+      vertical-align: top;
+      @include media($large-down) {
+        width: 50%;
+        margin-bottom: 15px;
+
+        &:nth-of-type(3n) {
+          margin-left: 0;
+        }
+      }
+      @include media($small-down) {
+        width: 100%;
+        margin-left: 0!important;
+        text-align: center;
+      }
+
+      + li {
+        margin-left: -5px;
+      }
+
+      > a {
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color--black;
+        font-size: 18px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+
+        &:first-of-type {
+          margin-top: 10px;
+        }
+
+        a {
+          color: $color--grey-dim;
+          display: block;
+          text-decoration: none;;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

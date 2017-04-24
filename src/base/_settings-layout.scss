@@ -6,7 +6,7 @@
 $column: 60px;
 $gutter: 20px;
 $grid-columns: 12;
-$max-width: 1200px;
+$max-width: 1300px;
 
 // Visual grid
 $visual-grid: false;
@@ -26,6 +26,7 @@ $medium: 768px;     // Tablet Horizontal (1024px - iPad)
 $large: 1024px;     // Tablet Vertically (1024px - iPad)
 $full: 1280px;      // Laptop (1280px - Macbook)
 $xlarge: 1450px;    // Desktop
+$huge: 1700px;      // Tremendous
 
 // Media Queries
 // Xtra Small
@@ -51,3 +52,7 @@ $full-down: new-breakpoint(max-width ($full) 12);
 // XLarge
 $xlarge-up: new-breakpoint(min-width $xlarge + 1px 12);
 $xlarge-down: new-breakpoint(max-width ($xlarge) 12);
+
+// XLarge
+$huge-up: new-breakpoint(min-width $huge + 1px 12);
+$huge-down: new-breakpoint(max-width ($huge) 12);

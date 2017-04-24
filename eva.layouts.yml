@@ -1,0 +1,16 @@
+onecol:
+  label: Single column
+  category: 'Columns: 1'
+  path: layouts/onecol
+  icon: onecol.png
+  css: onecol.css
+  template: panels-onecol
+  regions:
+    top_banner:
+      label: Top banner
+    search_local:
+      label: Search Local
+    top_bar:
+      label: Top bar
+    page_elements:
+      label: Page elements

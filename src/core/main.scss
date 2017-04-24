@@ -2,7 +2,6 @@
 @import "~normalize.css/normalize.css";
 
 // Mixins - Makes it easy to copy mixin folder to another project
-@import "~adapt-mixins/src/mixins/mixins.scss";
 @import "../mixins/mixins.scss";
 
 
@@ -16,7 +15,30 @@
 @import "../base/utility";
 
 // Components
-@import "../components/component/component";
+@import "../components/search/search";
+@import "../components/system/system";
+@import "../components/system/pager";
+@import "../components/system/user";
+@import "../components/cookies/cookies";
 
 // Layout elements
 @import "../layout/base/base";
+@import "../layout/header";
+@import "../layout/footer";
+
+body {
+  background: $color--smoke;
+  overflow-x: hidden;
+}
+
+.layout-content {
+  @include main-content(1300px);
+  padding-top: vr(5);
+  padding-bottom: vr(5);
+}
+
+.layout-container {
+  @include media($large-down) {
+    overflow-x: hidden;
+  }
+}

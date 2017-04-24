@@ -1,0 +1,20 @@
+# info file
+name: eva
+type: theme
+description: eva theme.
+package: Theme
+core: 8.x
+libraries:
+  - eva/global-css
+  - eva/global-js
+  - eva/font-awesome
+ckeditor_stylesheets:
+  - css/editor.css
+regions:
+  header_row_first: 'Header'
+  content: 'Content'
+  footerrow1: 'Footer row 1'
+  footerrow2: 'Footer row 2'
+
+stylesheets-remove:
+  - modules/contrib/eu_cookie_compliance/css/eu_cookie_compliance.css

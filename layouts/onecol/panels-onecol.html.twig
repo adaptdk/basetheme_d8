@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Template for a one column panel layout.
+ *
+ * This template provides a very simple "one column" panel display layout.
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   - content.middle: The only panel in the layout.
+ */
+#}
+{% if content.top_banner %}
+  <div class="top-banner">
+    {{ content.top_banner }}
+    <div class="nh-search-toggle">
+      {% trans %}
+        Search in articles from New & Healthy
+      {% endtrans %}
+    </div>
+  </div>
+{% endif %}
+
+{% if content.search_local %}
+  <div class="search-local">
+    {{ content.search_local }}
+  </div>
+{% endif %}
+
+
+{% if content.top_bar %}
+  <div class="top-bar">
+    {{ content.top_bar }}
+  </div>
+{% endif %}
+
+
+{{ content.page_elements }}

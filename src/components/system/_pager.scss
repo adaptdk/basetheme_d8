@@ -1,0 +1,45 @@
+.pager {
+  text-align: center;
+
+  &__items {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    height: 30px;
+    background: #ededed;
+
+    &:hover {
+      background: darken(#ededed, 5%);
+    }
+
+    a {
+      color: #414146;
+      display: block;
+      text-align: center;
+      padding: 0 12px;
+      line-height:30px;
+      cursor: pointer;
+
+      &:hover {
+
+      }
+    }
+
+    &.is-active {
+      background: $color--primary;
+      color: white;
+
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+.pager__item--ellipsis {
+  display: none;
+}

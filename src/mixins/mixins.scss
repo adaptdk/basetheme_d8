@@ -1,2 +1,29 @@
 // Mixin list
 @import "typography";
+
+@mixin main-content($width) {
+  margin: 0 auto;
+  max-width: $width;
+  width: 100%;
+  padding: 0 20px;
+}
+
+
+$type : general;
+
+@mixin button-style($color, $type) {
+  display: inline-block;
+
+  @if ($type == border) {
+    background: transparent;
+    border: 2px solid $color;
+    padding: 8px;
+    transition: border 0.2s linear, background 0.2s linear, color 0.2s linear;
+
+    &:hover {
+      color: $color--white;
+      background: $color--primary;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bartik theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\file\Entity\File;
+use Drupal\image\Entity\ImageStyle;
+
+require_once('modules/contrib/devel/kint/kint/Kint.class.php');
+
+/**
+ * Implements hook_preprocess_entity().
+ */
+function eva_preprocess_paragraph(&$vars) {
+
+  $paragraph = $vars['paragraph'];
+
+  $paragraph_types = array(
+    'box_1_1',
+    'box_1_2',
+    'textarea',
+    'checklist'
+  );
+
+  $image_styles = array(
+    'box_1_1' => 'box_1_1',
+    'box_1_2' => 'box_1_2'
+  );
+
+  if (in_array($paragraph->getType(), $paragraph_types)) {
+
+    // Get the refrened bg color.
+    if ($paragraph->hasField('field_background_color') && !$paragraph->get('field_background_color')->isEmpty()) {
+
+      // Get the background color.
+      $tid = $paragraph->get('field_background_color')->first()->getValue()['target_id'];
+      $term = taxonomy_term_load($tid);
+
+      // Make variable for the template.
+      $vars['color'] = '#' . $term->get('field_hex_code')->value;
+    }
+
+    // Get url from image.
+    if ($paragraph->hasField('field_background_image') && !$paragraph->get('field_background_image')->isEmpty()) {
+      // If the background image has been deleted, this will become null.
+      // Therefore we will not try to load a image that has been deleted.
+      if ($paragraph->get('field_background_image')->first()->get('entity')->getTarget() != NULL) {
+        $element = $paragraph->get('field_background_image')->first()->get('entity')->getTarget()->getValue();
+        $paragraphImageId = $element->get('image')->first()->getValue()['target_id'];
+        if ($paragraphImageId) {
+          $paragraphImageFile = File::load($paragraphImageId);
+          $imageStyle = isset($image_styles[$paragraph->getType()]) ? $image_styles[$paragraph->getType()] : 'large';
+          $paragraphImageUrl = ImageStyle::load($imageStyle)->buildUrl($paragraphImageFile->getFileUri());
+          $vars['imageUrl'] = $paragraphImageUrl;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ * @param array $suggestions
+ * @param array $variables
+ */
+function eva_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Block suggestions for custom block bundles.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function eva_theme_preprocess_block(&$variables) {
+
+  $variables['base_path'] = base_path();
+
+  //temp logo to png replacement
+  switch ($variables['base_plugin_id']) {
+    case 'system_branding_block':
+      $variables['site_logo'] = '';
+      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+      }
+      break;
+
+  }
+
+}
