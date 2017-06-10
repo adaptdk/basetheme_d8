@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="20px" viewBox="0 0 11 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Web-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="who-we-are-hover" transform="translate(-345.000000, -3416.000000)" fill-rule="nonzero" fill="#C6C3C3">
+            <g id="social-media" transform="translate(345.000000, 3413.000000)">
+                <path d="M6.74131274,22.992278 L6.74131274,13.8725869 L9.80694981,13.8725869 L10.2625483,10.3204633 L6.74131274,10.3204633 L6.74131274,8.05019305 C6.74131274,7.02316602 7.02702703,6.32046332 8.5019305,6.32046332 L10.3861004,6.32046332 L10.3861004,3.13899614 C10.0617761,3.09266409 8.94208494,3 7.64478764,3 C4.92664093,3 3.07335907,4.66023166 3.07335907,7.7027027 L3.07335907,10.3281853 L0,10.3281853 L0,13.8803089 L3.07335907,13.8803089 L3.07335907,22.992278 L6.74131274,22.992278 Z" id="facebook"></path>
+            </g>
+        </g>
+    </g>
+</svg>

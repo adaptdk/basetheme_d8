@@ -1,8 +1,12 @@
 // Mixin list
 @import "typography";
+@import "form";
 
-@mixin main-content($width) {
+@mixin center-wrapper($padding: 20px, $width: 1450px) {
   margin: 0 auto;
   max-width: $width;
-  width: 95%;
+  width: 100%;
+  padding: $padding;
 }
+
+

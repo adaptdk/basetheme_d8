@@ -1,6 +1,6 @@
 .user-login-form, .user-form {
   padding: vr(3) 0;
-  @include main-content(500px);
+  @include center-wrapper(0 20px, 500px);
 
   .form-item {
     margin-bottom: 10px;
@@ -50,7 +50,7 @@
   }
 
   .block-system, .views-element-container {
-    @include main-content(1300px);
+    @include center-wrapper();
     @include clearfix;
     padding: vr(3) 0;
   }

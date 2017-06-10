@@ -1,10 +1,28 @@
 // Primary Colours
-$color--primary:      #413283;
+$color--primary:      #3CB7C2;
 $color--secondary:    #1d1d1b;
 $color--tertiary:     #1d1d1b;
 $color--quaternary:   #1d1d1b;
 $color--quinary:      #1d1d1b;
 
+// System colors
+
+$color--status: #cecece;
+$color--warning: #F00;
+$color--success: #0F0;
+
 // Common Colours
 $color--black:        #000;
 $color--white:        #fff;
+
+$color--cookie: rgba(50,50,55,0.91);
+$color--aqua: #3CB7C2;
+$color--violet: #564B9B;
+
+//50 shades of grey
+$color--grey:  #c1c1c1;
+$color--smoke: #efefef;
+$color--grey-dark: #323237;
+$color--grey-light: #EBEAEA; //grey block
+$color--grey-light-dark: #F8F5F5; //grey block
+$color--grey-dim: #6d6d6d;

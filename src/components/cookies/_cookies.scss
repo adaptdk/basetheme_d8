@@ -1,0 +1,99 @@
+#sliding-popup {
+  position: fixed;
+
+  .popup-content {
+    @include center-wrapper();
+
+  }
+}
+
+#sliding-popup {
+  background: rgba(240, 240, 240, 0.96) !important;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  position: fixed;
+  border-top: 2px solid $color--primary;
+
+  .popup-content {
+    padding: 15px;
+
+    #popup-text {
+      margin: 0;
+      line-height: 16px;
+      float: left;
+      width: calc(100% - 300px);
+      max-width: none;
+
+      @include media($large-down) {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      h1, h2, h3, h4 {
+        margin-top: 0;
+
+      }
+
+      p {
+
+      }
+    }
+  }
+
+  #popup-buttons#popup-buttons {
+    float: right;
+    text-align: right;
+    margin: 0;
+    width: 300px;
+
+    @include media($large-down) {
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+
+    button {
+      @include button-style($color--primary, border);
+      color: $color--primary;
+      font-size: 14px;
+
+      @include media($large-down) {
+
+      }
+
+      &.agree-button {
+
+        @include media($large-down) {
+          width: 49%;
+          margin-left: 0;
+          margin-right: 0;
+
+          &:first-child {
+            margin-right: 2%;
+            float: left;
+          }
+        }
+        &:hover {
+
+        }
+      }
+
+      &.find-more-button {
+        @include media($large-down) {
+          width: 49%;
+          margin-left: 0;
+          margin-right: 0;
+
+          &:first-child {
+            margin-right: 2%;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}

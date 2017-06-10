@@ -1,0 +1,25 @@
+$type : general;
+
+@mixin button-style($color, $type) {
+  display: inline-block;
+
+  @if ($type == border) {
+    background: transparent;
+    border: 2px solid $color;
+    padding: 8px;
+    transition: border 0.2s linear, background 0.2s linear, color 0.2s linear;
+
+    &:hover {
+      color: $color--white;
+      background: $color--primary;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  @include openSans;
+  font-family: $main-font;
 }
 
 // Headers
@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include openSans;
+  margin-top: 0;
 }
 
 h1 {
@@ -30,19 +30,23 @@ h2 {
 }
 
 h3 {
-  font-size: $h3-size;
+  @include typi('h3');
+  margin-bottom: vr(1.5); // 2 baselines
 }
 
 h4 {
-  font-size: $h4-size;
+  @include typi('h4');
+  margin-bottom: vr(1.5); // 2 baselines
 }
 
 h5 {
-  font-size: $h5-size;
+  @include typi('h5');
+  margin-bottom: vr(1.2); // 2 baselines
 }
 
 h6 {
-  font-size: $h6-size;
+  @include typi('h6');
+  margin-bottom: vr(1.2); // 2 baselines
 }
 
 a {

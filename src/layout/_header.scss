@@ -1,22 +1,38 @@
 .layout-header {
-  .inner-content {
-    //@include main-content(1300px);
+  @include center-wrapper();
+}
+
+//mobile nav
+#mobile-nav {
+  float:right;
+  margin-top: 36px;
+  color:#ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  display: none;
+  @include media($large-down) {
+    display: block;
   }
 }
 
-// Site logo
-.block-system-branding-block {
-  display: inline-block;
-  width: 400px;
-  position: relative;
-  top: 20px;
+.mobile-icon {
+    position:relative;
+    display:inline-block;
+    width:30px;
+    text-indent:-9999px;
+}
 
-  a {
-    display: block;
-  }
+.menu-borders {
+    height:20px;
+    border-top:4px solid $color--grey-dark;
+    border-bottom:4px solid $color--grey-dark;
+}
 
-  img {
-    width: 100%;
-    height: auto;
-  }
+.menu-borders:before {
+    content:"";
+    position:absolute;
+    top:4px;
+    left:0;
+    width:100%;
+    border-top:4px solid $color--grey-dark;
 }

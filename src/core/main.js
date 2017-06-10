@@ -1,6 +1,5 @@
 require('./main.scss');
 
-require('../components/component/component')();
 require('../components/search/search')();
 
 
