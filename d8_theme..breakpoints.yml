@@ -1,0 +1,17 @@
+eva.group1.narrow:
+  label: narrow
+  mediaQuery: '(max-width: 800px)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+  group: eva.group1
+evae.group1.wide:
+  label: wide
+  mediaQuery: '(min-width: 800px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: eva.group1
+

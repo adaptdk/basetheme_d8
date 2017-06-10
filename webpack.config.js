@@ -4,10 +4,11 @@ var path = require('path');
 
 module.exports = {
   entry: {
+    editor: './src/core/editor.scss',
     bundle: './src/core/main.js'
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: __dirname + '/dist'
   },
   plugins: [
