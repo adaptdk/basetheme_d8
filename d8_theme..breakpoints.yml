@@ -1,17 +1,32 @@
-eva.group1.narrow:
-  label: narrow
-  mediaQuery: '(max-width: 800px)'
+adapt.mobile:
+  label: mobile
+  mediaQuery: 'all and (max-width: 559px)'
   weight: 0
   multipliers:
     - 1x
     - 2x
-  group: eva.group1
-evae.group1.wide:
-  label: wide
-  mediaQuery: '(min-width: 800px)'
+  group: adapt.group1
+adapt.tablet:
+  label: tablet
+  mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
   weight: 1
   multipliers:
     - 1x
     - 2x
-  group: eva.group1
-
+  group: adapt.group1
+adapt.desktop:
+  label: Desktop
+  mediaQuery: 'all and (min-width: 851px) and (max-width: 1599px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: adapt.group1
+adapt.huge:
+  label: Huge
+  mediaQuery: 'all and (min-width: 1600px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: adapt.group1
