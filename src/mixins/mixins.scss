@@ -9,4 +9,54 @@
   padding: $padding;
 }
 
+@mixin site-margin($case, $size) {
+  @if $case == "absolute" {
+
+    @if $size == "big" {
+      left: 75px;
+      right: 75px;
+      bottom: 75px;
+      top: 75px;
+    }
+    @if $size == "medium" {
+      left: 50px;
+      right: 50px;
+      bottom: 50px;
+      top: 50px;
+    }
+
+    @if $size == "small" {
+      left: 25px;
+      right: 25px;
+      bottom: 25px;
+      top: 25px;
+    }
+  }
+
+  @if $case == "padding-full" {
+    @if $size == "big" {
+      padding: 75px;
+    }
+    @if $size == "medium" {
+      padding: 50px;
+    }
+
+    @if $size == "small" {
+      padding: 25px;
+    }
+  }
+
+  @if $case == "margin-full" {
+    @if $size == "big" {
+      margin: 75px;
+    }
+    @if $size == "medium" {
+      margin: 50px;
+    }
+
+    @if $size == "small" {
+      margin: 25px;
+    }
+  }
+}
 
