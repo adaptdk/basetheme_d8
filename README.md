@@ -1,6 +1,9 @@
 # basetheme_d8
 Starter d8 theme for everyday projects
 
+## Update 2017-20
++ Added paragraphs support. Prepared infrastructure in scss dir and some default stylings
+
 ## Some of the features
 + JS-CSS compiling ready
 + css/template file structure already created
